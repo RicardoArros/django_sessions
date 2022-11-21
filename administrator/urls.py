@@ -27,6 +27,7 @@ urlpatterns = [
     path('',  views.login, name='login'),
     path('home',  views.home, name='home'),
     path('crud/create',  views.create, name='create'),
+    path('crud/list',  views.list, name='list'),
     # path('app/', include('app.urls'))
 ]
 

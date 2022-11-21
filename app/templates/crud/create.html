@@ -2,44 +2,43 @@
 
 {% block title %} Administrador - Crear {% endblock %}
 
+{% block navbar %}
+  {% include "../components/navbar.html"%}
+{% endblock %}
+
 {% block body %}
 
 <form action="create" method="post"> {% csrf_token %}
   <table>
     <tr>
-      <td>Id certificado</td>
-      <td><input type="text" name="id_certificado" placeholder="Ingrese id certificado" /></td>
+      <td>Número de artículo</td>
+      <td><input type="number" name="nro_articulo" placeholder="Ingrese numero del artículo" /></td>
     </tr>
 
     <tr>
       <td>Nombre</td>
-      <td><input type="text" name="nombre" placeholder="Ingrese nombre de quien lo obtuvo" /></td>
+      <td><input type="text" name="nombre" placeholder="Ingrese nombre del artículo" /></td>
     </tr>
 
     <tr>
-      <td>Fecha de obtención</td>
-      <td><input type="date" name="fecha" placeholder="Ingrese fecha de obtención" /></td>
+      <td>Ubicación</td>
+      <td><input type="date" name="ubicacion" placeholder="Ingrese ubicación del artículo" /></td>
     </tr>
 
     <tr>
-      <td>Curso</td>
-      <td><input type="text" name="curso" placeholder="Ingrese curso" /></td>
+      <td>Stock</td>
+      <td><input type="number" name="curso" placeholder="Ingrese stock del artículo" /></td>
     </tr>
 
     <tr>
-      <td>Versión</td>
-      <td><input type="text" name="version" placeholder="Ingrese version de curso" /></td>
-    </tr>
-
-    <tr>
-      <td>Id validación</td>
-      <td><input type="text" name="id_validacion" placeholder="Ingrese id validación" /></td>
-    </tr>
+      <td>Descripción</td>
+      <td><input type="text" name="descripcion" placeholder="Ingrese descripción del artículo" /></td>
+    </tr>    
   </table>
 
   <div class="form-group py-5">
     <button type="submit" class="btn btn-success btn-block">Ingresar</button>
-    <button type="button" class="btn btn-danger btn-block" onclick="document.location.href='inicio'">Cancelar</button>
+    <button type="button" class="btn btn-danger btn-block" onclick="document.location.href='../home'">Cancelar</button>
   </div>
 </form>
 
