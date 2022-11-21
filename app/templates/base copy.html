@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>{% block title %} {% endblock %}</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  {% load static %}
+</head>
+
+<body>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/"><img src="{% static 'app/img/logo.webp' %}" alt="" class="logo"
+          style="width: 60px;" /></a>
+
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+        aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <!-- Administrador de oficina -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Administrador de oficina
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Ingresar artículo de oficina</a></li>
+              <li><a class="dropdown-item" href="#">Listar artículos de oficina</a></li>
+              <li><a class="dropdown-item" href="#">Actualizar artículo de oficina</a></li>
+              <li><a class="dropdown-item" href="#">Eliminar artículo de oficina</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Buscar artículo de oficina</a></li>
+            </ul>
+          </li>
+          <!-- #Administrador de oficina -->
+
+          <!-- Administrador de vehículos -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Administrador de vehículos
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Ingresar vehículo</a></li>
+              <li><a class="dropdown-item" href="#">Listar vehículos</a></li>
+              <li><a class="dropdown-item" href="#">Actualizar vehículo</a></li>
+              <li><a class="dropdown-item" href="#">Eliminar vehículo</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Buscar vehículo</a></li>
+            </ul>
+          </li>
+          <!-- #Administrador de vehículos -->
+
+          <!-- Administrador de computación -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Administrador de computación
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Ingresar artículo de computación</a></li>
+              <li><a class="dropdown-item" href="#">Listar artículos de computación</a></li>
+              <li><a class="dropdown-item" href="#">Actualizar artículo de computación</a></li>
+              <li><a class="dropdown-item" href="#">Eliminar artículo de computación</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Buscar artículo de computación</a></li>
+            </ul>
+          </li>
+          <!-- #Administrador de computación -->
+
+          <!-- Administrador General -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Administrador General
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Ingresar usuario</a></li>
+              <li><a class="dropdown-item" href="#">Listar usuarios</a></li>
+              <li><a class="dropdown-item" href="#">Actualizar usuario</a></li>
+              <li><a class="dropdown-item" href="#">Eliminar usuario</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Buscar artículo de computación</a></li>
+            </ul>
+          </li>
+          <!-- #Administrador general -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- #NAV -->
+
+  <div class="container py-4">
+    {% block body %}
+    {% endblock %}
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

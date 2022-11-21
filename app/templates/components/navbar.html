@@ -1,0 +1,98 @@
+{% if sesion_activa == 'Activa' %}
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <!-- Administrador de oficina -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Administrador de oficina
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Ingresar artículo de oficina</a></li>
+        <li><a class="dropdown-item" href="#">Listar artículos de oficina</a></li>
+        <li><a class="dropdown-item" href="#">Actualizar artículo de oficina</a></li>
+        <li><a class="dropdown-item" href="#">Eliminar artículo de oficina</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Buscar artículo de oficina</a></li>
+      </ul>
+    </li>
+    <!-- #Administrador de oficina -->
+
+    <!-- Administrador de vehículos -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Administrador de vehículos
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Ingresar vehículo</a></li>
+        <li><a class="dropdown-item" href="#">Listar vehículos</a></li>
+        <li><a class="dropdown-item" href="#">Actualizar vehículo</a></li>
+        <li><a class="dropdown-item" href="#">Eliminar vehículo</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Buscar vehículo</a></li>
+      </ul>
+    </li>
+    <!-- #Administrador de vehículos -->
+
+    <!-- Administrador de computación -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Administrador de computación
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Ingresar artículo de computación</a></li>
+        <li><a class="dropdown-item" href="#">Listar artículos de computación</a></li>
+        <li><a class="dropdown-item" href="#">Actualizar artículo de computación</a></li>
+        <li><a class="dropdown-item" href="#">Eliminar artículo de computación</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Buscar artículo de computación</a></li>
+      </ul>
+    </li>
+    <!-- #Administrador de computación -->
+
+    <!-- Administrador General -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Administrador General
+      </a>
+      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <li><a class="dropdown-item" href="#">Ingresar usuario</a></li>
+        <li><a class="dropdown-item" href="#">Listar usuarios</a></li>
+        <li><a class="dropdown-item" href="#">Actualizar usuario</a></li>
+        <li><a class="dropdown-item" href="#">Eliminar usuario</a></li>
+        <li>
+          <hr class="dropdown-divider">
+        </li>
+        <li><a class="dropdown-item" href="#">Buscar artículo de computación</a></li>
+      </ul>
+    </li>
+    <!-- #Administrador general -->
+  </ul>
+</div>
+
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link" href="iniciar_sesion">Cerrar sesión</a>
+    </li>
+  </ul>
+</div>
+
+{% elif session_activa == None %}
+<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+    <li class="nav-item">
+      <a class="nav-link" href="iniciar_sesion">Iniciar sesión</a>
+    </li>
+  </ul>
+</div>
+{% endif %}

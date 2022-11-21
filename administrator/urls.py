@@ -24,7 +24,9 @@ from app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',  views.home),
+    path('',  views.login, name='login'),
+    path('home',  views.home, name='home'),
+    path('crud/create',  views.create, name='create'),
     # path('app/', include('app.urls'))
 ]
 
